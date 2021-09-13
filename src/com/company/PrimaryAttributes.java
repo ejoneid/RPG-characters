@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Objects;
+
 public class PrimaryAttributes {
     protected int vitality;
     protected int strength;
@@ -13,13 +15,24 @@ public class PrimaryAttributes {
         this.intelligence = intelligence;
     }
 
-    public PrimaryAttributes add(PrimaryAttributes attributesToAdd) {
-        int newVitality = this.vitality + attributesToAdd.vitality;
-        int newStrength = this.strength + attributesToAdd.strength;
-        int newDexterity = this.dexterity + attributesToAdd.dexterity;
-        int newIntelligence = this.intelligence + attributesToAdd.intelligence;
+    public void add(PrimaryAttributes attributesToAdd) {
+        this.vitality = this.vitality + attributesToAdd.vitality;
+        this.strength = this.strength + attributesToAdd.strength;
+        this.dexterity = this.dexterity + attributesToAdd.dexterity;
+        this.intelligence = this.intelligence + attributesToAdd.intelligence;
+    }
 
-        return new PrimaryAttributes(newVitality, newStrength, newDexterity, newIntelligence);
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        PrimaryAttributes that = (PrimaryAttributes) o;
+        return vitality == that.vitality && strength == that.strength && dexterity == that.dexterity && intelligence == that.intelligence;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(vitality, strength, dexterity, intelligence);
     }
 
     @Override

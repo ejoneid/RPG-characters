@@ -9,7 +9,7 @@ public abstract class Character {
 
     public void levelUp() {
         this.lvl++;
-        this.baseAttributes = this.baseAttributes.add(attributesgrowth);
+        baseAttributes.add(attributesgrowth);
     }
 
     public Character(String name) {

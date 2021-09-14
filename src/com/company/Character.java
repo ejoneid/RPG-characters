@@ -5,15 +5,23 @@ public abstract class Character {
     private int lvl = 1;
     private PrimaryAttributes baseAttributes;
     private PrimaryAttributes attributesgrowth;
-    private Equipment equipment;
+    private Equipment equipment = new Equipment(null, null, null, null);
+
+    public Character(String name, PrimaryAttributes baseAttributes, PrimaryAttributes attributesgrowth) {
+        this.name = name;
+        this.baseAttributes = baseAttributes;
+        this.attributesgrowth = attributesgrowth;
+    }
 
     public void levelUp() {
         this.lvl++;
-        baseAttributes.add(attributesgrowth);
+        this.baseAttributes.add(this.attributesgrowth);
     }
 
-    public Character(String name) {
-        this.name = name;
+    public void levelUp(int lvls) {
+        for (int i = 0; i < lvls; i++) {
+            levelUp();
+        }
     }
 
     @Override
@@ -25,5 +33,21 @@ public abstract class Character {
                 ", attributesgrowth=" + attributesgrowth +
                 ", equipment=" + equipment +
                 '}';
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getLvl() {
+        return lvl;
+    }
+
+    public PrimaryAttributes getBaseAttributes() {
+        return baseAttributes;
+    }
+
+    public Equipment getEquipment() {
+        return equipment;
     }
 }

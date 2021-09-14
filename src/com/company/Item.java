@@ -10,4 +10,6 @@ public abstract class Item {
         this.lvlRequirement = lvlRequirement;
         this.itemSlot = itemSlot;
     }
+
+    public Item() {}
 }

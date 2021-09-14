@@ -14,6 +14,6 @@ class PrimaryAttributesTest {
         actual.add(at2);
         PrimaryAttributes expected = new PrimaryAttributes(6, 8, 10, 12);
 
-        assertTrue(expected.equals(actual));
+        assertEquals(expected, actual);
     }
 }

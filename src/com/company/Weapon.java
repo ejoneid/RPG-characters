@@ -21,7 +21,7 @@ public class Weapon extends Item {
             throw new InvalidWeaponException("Not high enough level for this item!");
         }
 
-        if (!character.getAcceptableWeaponTypes().contains(this)) {
+        if (!character.getAcceptableWeaponTypes().contains(this.type)) {
             throw new InvalidWeaponException("This character cannot use this weapontype!");
         }
 

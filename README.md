@@ -10,3 +10,6 @@ Attributes is used to calculate the damage a character can deal and take.
 | Warrior | Mail, Plate | Axe, Hammer, Sword |
 | Rouge | Leather, Mail | Dagger, Sword |
 | Ranger | Leather, Mail | Bow | 
+
+## Class diagram
+![Class diagram image](/classDiagram.png)

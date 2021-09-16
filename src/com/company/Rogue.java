@@ -14,4 +14,9 @@ public class Rogue extends Character {
                 new ArrayList<WeaponType>(Arrays.asList(WeaponType.DAGGER, WeaponType.SWORD))
         );
     }
+
+    @Override
+    public double getDPS() {
+        return (this.getWeapon().getDPS() * (1 + this.getBaseAttributes().dexterity / 100));
+    }
 }

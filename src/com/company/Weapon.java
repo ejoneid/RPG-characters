@@ -12,10 +12,12 @@ public class Weapon extends Item {
         this.attacksPerSecond = attacksPerSecond;
     }
 
+    @Override
     public double getDPS() {
         return damage * attacksPerSecond;
     }
 
+    @Override
     public boolean canBeEquipedByCharacter(Character character) throws InvalidWeaponException {
         if (character.getLvl() < this.getLvlRequirement()) {
             throw new InvalidWeaponException("Not high enough level for this item!");

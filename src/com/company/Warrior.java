@@ -13,4 +13,15 @@ public class Warrior extends Character {
                 new ArrayList<WeaponType>(Arrays.asList(WeaponType.AXE, WeaponType.HAMMER, WeaponType.SWORD))
         );
     }
+
+    @Override
+    public double getDPS() {
+        double dps;
+        try {
+            dps = (this.getWeapon().getDPS() * (1 + this.getBaseAttributes().strength / 100));
+        } catch (NullPointerException error) {
+            dps = 1 * (1 + this.getBaseAttributes().strength / 100);
+        }
+        return dps;
+    }
 }

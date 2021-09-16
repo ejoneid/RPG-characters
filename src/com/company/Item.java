@@ -20,4 +20,5 @@ public abstract class Item {
     }
 
     public abstract boolean canBeEquipedByCharacter(Character character) throws Exception;
+    public abstract double getDPS();
 }

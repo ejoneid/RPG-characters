@@ -26,6 +26,8 @@ public abstract class Character {
         this.acceptableWeaponTypes = acceptableWeaponTypes;
     }
 
+    public abstract double getDPS();
+
     public boolean equip(Item item) throws InvalidWeaponException, Exception {
         if (item.canBeEquipedByCharacter(this)) {
             equipment.put(item.getItemSlot(), item);
@@ -56,10 +58,6 @@ public abstract class Character {
                 '}';
     }
 
-    public String getName() {
-        return name;
-    }
-
     public int getLvl() {
         return lvl;
     }
@@ -74,5 +72,9 @@ public abstract class Character {
 
     public ArrayList<WeaponType> getAcceptableWeaponTypes() {
         return acceptableWeaponTypes;
+    }
+
+    public Item getWeapon() {
+        return this.equipment.get(ItemSlot.WEAPON);
     }
 }

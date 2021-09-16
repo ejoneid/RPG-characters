@@ -14,4 +14,9 @@ public class Mage extends Character{
                 new ArrayList<WeaponType>(Arrays.asList(WeaponType.STAFF, WeaponType.WAND))
         );
     }
+
+    @Override
+    public double getDPS() {
+        return (this.getWeapon().getDPS() * (1 + this.getBaseAttributes().intelligence / 100));
+    }
 }

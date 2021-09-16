@@ -11,6 +11,7 @@ public class Armor extends Item {
         this.type = type;
     }
 
+    @Override
     public boolean canBeEquipedByCharacter(Character character) throws InvalidArmorException {
         if (character.getLvl() < this.getLvlRequirement()) {
             throw new InvalidArmorException("Not high enough level for this item!");
@@ -21,5 +22,10 @@ public class Armor extends Item {
         }
 
         return true;
+    }
+
+    @Override
+    public double getDPS() {
+        return 0;
     }
 }

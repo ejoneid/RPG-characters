@@ -14,4 +14,9 @@ public class Ranger extends Character {
                 new ArrayList<WeaponType>(Arrays.asList(WeaponType.BOW))
         );
     }
+
+    @Override
+    public double getDPS() {
+        return (this.getWeapon().getDPS() * (1 + this.getBaseAttributes().dexterity / 100));
+    }
 }

@@ -1,4 +1,6 @@
-package com.company;
+package com.company.character;
+
+import com.company.item.*;
 
 import java.util.ArrayList;
 import java.util.HashMap;

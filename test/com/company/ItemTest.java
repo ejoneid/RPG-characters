@@ -1,5 +1,9 @@
 package com.company;
 
+import com.company.character.Character;
+import com.company.character.PrimaryAttributes;
+import com.company.character.Warrior;
+import com.company.item.*;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;

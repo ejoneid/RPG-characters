@@ -1,4 +1,4 @@
-package com.company;
+package com.company.item;
 
 public enum ArmorType {
     CLOTH,

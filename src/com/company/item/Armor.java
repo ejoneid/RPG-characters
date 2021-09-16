@@ -1,5 +1,8 @@
-package com.company;
+package com.company.item;
 
+
+import com.company.character.Character;
+import com.company.character.PrimaryAttributes;
 
 public class Armor extends Item {
     PrimaryAttributes attributes;

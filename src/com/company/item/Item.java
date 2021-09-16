@@ -1,4 +1,6 @@
-package com.company;
+package com.company.item;
+
+import com.company.character.Character;
 
 public abstract class Item {
     private String name;

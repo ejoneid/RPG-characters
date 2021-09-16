@@ -1,4 +1,7 @@
-package com.company;
+package com.company.character;
+
+import com.company.item.ArmorType;
+import com.company.item.WeaponType;
 
 import java.util.ArrayList;
 import java.util.Arrays;

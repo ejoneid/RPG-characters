@@ -1,4 +1,6 @@
-package com.company;
+package com.company.item;
+
+import com.company.character.Character;
 
 public class Weapon extends Item {
     WeaponType type;

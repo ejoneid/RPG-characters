@@ -16,10 +16,12 @@ public class Armor extends Item {
 
     @Override
     public boolean canBeEquipedByCharacter(Character character) throws InvalidArmorException {
+//        Checks if the character has a high enough level for this armor.
         if (character.getLvl() < this.getLvlRequirement()) {
             throw new InvalidArmorException("Not high enough level for this item!");
         }
 
+//        Checks if the character can use this armortype.
         if (!character.getAcceptableArmorTypes().contains(this.type)) {
             throw new InvalidArmorException("This character cannot use this armortype!");
         }

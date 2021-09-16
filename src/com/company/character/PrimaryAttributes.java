@@ -15,6 +15,7 @@ public class PrimaryAttributes {
         this.intelligence = intelligence;
     }
 
+//    Joins two PrimaryAttributes objects together by adding their attributes
     public void add(PrimaryAttributes attributesToAdd) {
         this.vitality = this.vitality + attributesToAdd.vitality;
         this.strength = this.strength + attributesToAdd.strength;

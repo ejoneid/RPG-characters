@@ -30,7 +30,9 @@ public abstract class Character {
 
     public abstract double getDPS();
 
-    public boolean equip(Item item) throws InvalidWeaponException, Exception {
+//    Equips an item if it is of an acceptable item type.
+//    If it isnt the correct exception is thrown by the canBeEquipedByCharacter funcion.
+    public boolean equip(Item item) throws Exception {
         if (item.canBeEquipedByCharacter(this)) {
             equipment.put(item.getItemSlot(), item);
             return true;
